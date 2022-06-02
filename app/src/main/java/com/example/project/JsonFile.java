@@ -10,6 +10,7 @@ import java.util.Scanner;
 public class JsonFile {
 
 
+
     private final JsonTask.JsonTaskListener listener;
     private final Activity activity;
 
