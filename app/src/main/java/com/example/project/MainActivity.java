@@ -18,6 +18,9 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements JsonTask.JsonTaskListener {
 
+   //ge appen internetåtkomst
+   //lägg till gson som en dependecy
+
    private final String URL = "https://mobprog.webug.se/json-api?login=a20louba";
    RecyclerView recyclerView;
    private List<Blomma> blommaList;
