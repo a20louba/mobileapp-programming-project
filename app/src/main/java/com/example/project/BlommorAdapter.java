@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class BlommorAdapter extends RecyclerView.Adapter<BlommorViewHolder>{
 
-    private List<Blommor> blommor = new ArrayList();
+    private List<Blomma> blomma = new ArrayList();
 
     @NonNull
     @Override
@@ -21,21 +21,21 @@ public class BlommorAdapter extends RecyclerView.Adapter<BlommorViewHolder>{
 
     @Override
     public void onBindViewHolder(@NonNull BlommorViewHolder holder, int position) {
-        Blommor blommor = blommor.get(position);
+        Blomma blomma = this.blomma.get(position);
 
-        holder.name.setText(blommor.getName());
-        holder.colour.setText(blommor.getColour());
-        holder.area.setText("Typ: " + blommor.getArea());
-        holder.auxdata.setText(blommor.getAuxdata());
+        holder.name.setText(blomma.getName());
+        holder.colour.setText(blomma.getColour());
+        holder.area.setText("Typ: " + blomma.getArea());
+        holder.auxdata.setText(blomma.getAuxdata());
     }
 
     @Override
     public int getItemCount() {
-        return blommor.size();
+        return blomma.size();
     }
 
-    public void setBlommor(List<Blommor> wonders) {
-        this.blommor = wonders;
+    public void setBlommor(List<Blomma> blomma) {
+        this.blomma = blomma;
     }
 
 }

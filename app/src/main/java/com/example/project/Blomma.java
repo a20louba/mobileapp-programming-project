@@ -1,6 +1,6 @@
 package com.example.project;
 
-public class Blommor {
+public class Blomma {
 
     private String name;
     private String colour;

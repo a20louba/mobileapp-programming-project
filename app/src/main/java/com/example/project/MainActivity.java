@@ -1,9 +1,6 @@
 package com.example.project;
 import android.os.Bundle;
 import android.util.Log;
-import android.webkit.WebView;
-import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -14,7 +11,6 @@ import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 
@@ -24,8 +20,9 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
 
    private final String URL = "https://mobprog.webug.se/json-api?login=a18chrkr";
    RecyclerView recyclerView;
-   private List<Blommor> blommorList;
+   private List<Blomma> blommaList;
    private BlommorAdapter adapter;
+   private final String TAG = "===>";
 
 
    @Override
@@ -34,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
        setContentView(R.layout.activity_main);
 
        adapter = new BlommorAdapter();
-       blommorList = new ArrayList<Blommor>();
+       blommaList = new ArrayList<Blomma>();
 
        recyclerView = findViewById(R.id.blommor_recycler);
        recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -45,9 +42,9 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
    @Override
    public void onPostExecute(String json) {
        Gson gson = new Gson();
-       Type type = new TypeToken<ArrayList<Blommor>>() {}.getType();
-       blommorList = gson.fromJson(json, type);
-       adapter.setBlommor(blommorList);
+       Type type = new TypeToken<ArrayList<Blomma>>() {}.getType();
+       blommaList = gson.fromJson(json, type);
+       adapter.setBlommor(blommaList);
        adapter.notifyDataSetChanged();
        Log.d(TAG, json);
    }
