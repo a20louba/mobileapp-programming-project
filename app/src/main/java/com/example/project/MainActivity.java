@@ -18,7 +18,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements JsonTask.JsonTaskListener {
 
-   private final String URL = "https://mobprog.webug.se/json-api?login=a18chrkr";
+   private final String URL = "https://mobprog.webug.se/json-api?login=a20louba";
    RecyclerView recyclerView;
    private List<Blomma> blommaList;
    private BlommorAdapter adapter;
