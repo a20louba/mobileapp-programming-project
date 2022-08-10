@@ -1,4 +1,4 @@
 package com.example.project;
 
-public class JsonTask {
+public class BlommorAdapter {
 }
